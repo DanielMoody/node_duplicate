@@ -1,0 +1,37 @@
+<?php
+// This operation relies on Drupal's destination handling
+// in admin views to return the user to the content listing.
+declare(strict_types=1);
+
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_entity_operation_alter().
+ */
+function node_duplicate_entity_operation_alter(array &$operations, EntityInterface $entity): void {
+  if ($entity->getEntityTypeId() !== 'node') {
+    return;
+  }
+
+  $account = \Drupal::currentUser();
+
+  $create_access = \Drupal::entityTypeManager()
+                          ->getAccessControlHandler('node')
+                          ->createAccess($entity->bundle(), $account, [], TRUE);
+
+  if (!$create_access->isAllowed()) {
+    return;
+  }
+
+  if (!$entity->access('view', $account)) {
+    return;
+  }
+
+  $operations['duplicate'] = [
+    'title' => t('Duplicate'),
+    'weight' => 25,
+    'url' => \Drupal\Core\Url::fromRoute('node_duplicate.duplicate', [
+      'node' => $entity->id(),
+    ]),
+  ];
+}

@@ -1,0 +1,7 @@
+name: 'Node Duplicate'
+type: module
+description: 'Adds a Duplicate operation for nodes on the content page.'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:node
