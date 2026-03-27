@@ -13,14 +13,10 @@ Adds a simple way to duplicate content in Drupal.
 ### Row-level duplicate
 Adds a **Duplicate** link to each node on `/admin/content`.
 
-### Bulk duplicate
-Adds a **Duplicate content** option to the bulk actions dropdown.
-
 ### Safe defaults
 - Copies all field values  
 - Sets the current user as author  
 - Marks duplicates as unpublished  
-
 
 ## Behavior
 
