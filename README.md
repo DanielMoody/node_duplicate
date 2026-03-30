@@ -7,7 +7,10 @@ Adds a simple way to duplicate content in Drupal.
 - Creates unpublished copies with a “(Copy)” suffix  
 
 ---
+## Installation
+Install via Composer:
 
+`composer require cms-alchemy/node-duplicate`
 ## Features
 
 ### Row-level duplicate
