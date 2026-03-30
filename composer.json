@@ -1,0 +1,19 @@
+{
+  "name": "cms-alchemy/node-duplicate",
+  "description": "Adds a duplicate operation for Drupal nodes with safe defaults and redirect to edit form.",
+  "type": "drupal-module",
+  "license": "GPL-3.0-or-later",
+  "require": {
+    "drupal/core": "^10 || ^11"
+  },
+  "extra": {
+    "drupal": {
+      "package": "Custom"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Drupal\\node_duplicate\\": "src/"
+    }
+  }
+}
