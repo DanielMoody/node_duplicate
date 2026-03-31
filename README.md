@@ -10,7 +10,10 @@ Adds a simple way to duplicate content in Drupal.
 ## Installation
 Install via Composer:
 
-`composer require cms-alchemy/node-duplicate`
+```
+composer require cms-alchemy/quick-media
+drush en quick_media
+```
 ## Features
 
 ### Row-level duplicate
