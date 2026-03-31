@@ -11,8 +11,8 @@ Adds a simple way to duplicate content in Drupal.
 Install via Composer:
 
 ```
-composer require cms-alchemy/quick-media
-drush en quick_media
+composer require cms-alchemy/node-duplicate
+drush en node_duplicate
 ```
 ## Features
 
